@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 #config ali apt sources 
-COPY sources.list /etc/apt/sources.list
+#COPY sources.list /etc/apt/sources.list
 RUN apt-get update && apt-get install \
 			      supervisor vim git wget net-tools jq openssh-server curl openjdk-8-jdk \
 			      -y 
