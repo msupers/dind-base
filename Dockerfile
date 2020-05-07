@@ -9,5 +9,5 @@ COPY supervisord.conf /etc/supervisor/supervisord.conf
 COPY sonar-scanner /usr/local/sonar-scanner
 COPY .ssh /root/.ssh 
 RUN chmod 600 /root/.ssh/id_rsa && chmod 600 /root/.ssh/id_rsa.pub && chmod 600 /root/.ssh/known_hosts
-ENV PATH $PATH:/usr/local/sonar-scanner/bin
+ENV PATH $PATH:/usr/local/sonar-scanner/bin:/usr/bin/docker
 CMD ["supervisord"]
